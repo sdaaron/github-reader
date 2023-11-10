@@ -16,7 +16,7 @@ class GitRepo(BaseModel):
 async def print_repo_url(repo: GitRepo):
     print(repo.git_url)
     git_url = repo.git_url
-    base_dir = "./tmp"
+    base_dir = f"./{git_url.split('/')[-1]}"
     try:
         # 从URL中解析仓库名称
         repo_name = git_url.split("/")[-1]
