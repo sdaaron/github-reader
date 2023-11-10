@@ -1,3 +1,5 @@
 fastapi
 gitpython
 pydantic
+importlib_metadata
+
