@@ -1,5 +1,4 @@
 fastapi
 gitpython
 pydantic
-importlib_metadata
-
+uvicorn
