@@ -16,7 +16,7 @@ class GitRepo(BaseModel):
 async def print_repo_url(repo: GitRepo):
     print(repo.git_url)
     git_url = repo.git_url
-    base_dir = os.path.expanduser("~/code/test/")
+    base_dir = "./tmp"
     try:
         # 从URL中解析仓库名称
         repo_name = git_url.split("/")[-1]
@@ -62,4 +62,4 @@ def read_all_files(directory):
 if __name__ == "__main__":
     import uvicorn
 
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("main:app", host="0.0.0.0", port=80, reload=True)
