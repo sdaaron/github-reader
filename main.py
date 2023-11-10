@@ -14,7 +14,7 @@ class GitRepo(BaseModel):
 
 @app.get("/")
 async def get_main():
-    return {"message": "Hello World"}
+    return {"message": "This is the main page of the code reader API service."}
 
 
 @app.post("/get-repo-content/")
