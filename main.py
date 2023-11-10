@@ -12,6 +12,11 @@ class GitRepo(BaseModel):
     git_url: str
 
 
+@app.get("/")
+async def get_main():
+    return {"message": "Hello World"}
+
+
 @app.post("/get-repo-content/")
 async def print_repo_url(repo: GitRepo):
     print(repo.git_url)
