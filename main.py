@@ -43,7 +43,7 @@ async def print_repo_url(repo: GitRepo):
         # 确保在此处删除临时目录
         shutil.rmtree(temp_dir)
         print("temp dir removed")
-        return {"content": content[:50000]}
+        return {"content": content[:100000]}
 
     except Exception as e:
         # 如果出现异常，也应该清理临时目录
